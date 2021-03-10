@@ -16,10 +16,11 @@ class TransactionsController < ApplicationController
 
   # POST /transactions
   def create
-    @transaction = User.transactions.build(transaction_params)
+    # byebug
+    @transaction = @user.transactions.build(transaction_params)
 
     if @transaction.save
-      render json: @transaction, status: :created, location: @transaction
+      render json: @transaction, status: :created
     else
       render json: @transaction.errors, status: :unprocessable_entity
     end
@@ -37,6 +38,7 @@ class TransactionsController < ApplicationController
   # DELETE /transactions/1
   def destroy
     @transaction.destroy
+    render json: @transaction
   end
 
   private

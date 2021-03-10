@@ -8,12 +8,6 @@ class UsersController < ApplicationController
     render json: @users
   end
 
-  def expenses_by_type
-    @expenses = @user.transaction_types
-
-    render json: @expenses
-  end
-
   # GET /users/1
   def show
     render json: @user

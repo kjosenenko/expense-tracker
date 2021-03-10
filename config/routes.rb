@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-  get '/users/:id/expenses_by_type' => 'users#expenses_by_type'
 
   resources :transaction_types
   resources :users do
