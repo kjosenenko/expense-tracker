@@ -6,12 +6,12 @@ class TransactionsController < ApplicationController
   def index
     @transactions = @user.transactions.all
 
-    render json: @transactions
+    render json: @transactions, except: [:updated_at]
   end
 
   # GET /transactions/1
   def show
-    render json: @transaction
+    render json: @transaction.slice(:id, :amount, :description, :user_id, :transaction_type_id, :created_at)
   end
 
   # POST /transactions

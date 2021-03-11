@@ -5,12 +5,12 @@ class TransactionTypesController < ApplicationController
   def index
     @transaction_types = TransactionType.all
 
-    render json: @transaction_types
+    render json: @transaction_types, only: [:id, :category]
   end
 
   # GET /transaction_types/1
   def show
-    render json: @transaction_type
+    render json: @transaction_type.slice(:id, :category)
   end
 
   # POST /transaction_types
