@@ -1,24 +1,37 @@
-# README
+# expense-tracker-back-end
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### About this application
 
-Things you may want to cover:
+The application contained in this repository is to serve as the backend API for the application found at https://github.com/kjosenenko/expense-tracker-front-end.
 
-* Ruby version
+### Installation
 
-* System dependencies
+Clone this repostiory into your directory.
 
-* Configuration
+Navigate to the new directory then execute:
+```
+$ bundle install
+```
+Make sure to run both of the following commands
+```
+$ rake db:migrate
 
-* Database creation
+$ rake db:seed
+```
+From there you can run the app by executing the shotgun command and serving on port :3000
+```
+$ rails s
+```
 
-* Database initialization
+### Using this application
 
-* How to run the test suite
+Once this backend API is installed and running on localhost:3000, please follow the steps for running the associated frontend application.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Contributing
 
-* Deployment instructions
+Bug reports and pull requests are welcome on GitHub at https://github.com/kjosenenko/expense-tracker-back-end.
 
-* ...
+### License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
